@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mini File Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>📁 Mini File Manager</h1>
+
+    <p class="subtitle">
+        A simple project using HTML, CSS, JavaScript and Node.js core modules.
+    </p>
+
+
+    <!-- CREATE FILE -->
+    <div class="box">
+
+        <h2>Create File</h2>
+
+        <input
+            id="filename"
+            type="text"
+            placeholder="Example: notes.txt"
+        >
+
+        <textarea
+            id="content"
+            placeholder="Write your file content..."
+        ></textarea>
+
+        <button onclick="createFile()">Create File</button>
+
+        <p id="message"></p>
+
+    </div>
+
+
+    <!-- SHOW FILES -->
+    <div class="box">
+
+        <h2>My Files</h2>
+
+        <button onclick="getFiles()">Show Files</button>
+
+        <ul id="fileList"></ul>
+
+    </div>
+
+
+    <!-- SYSTEM INFORMATION -->
+    <div class="box">
+
+        <h2>System Information</h2>
+
+        <button onclick="getSystemInfo()">Show System Info</button>
+
+        <div id="systemInfo"></div>
+
+    </div>
+
+
+    <!-- READ FILE POPUP -->
+    <div id="fileModal" class="modal">
+
+        <div class="modal-box">
+
+            <h2 id="modalTitle">File Name</h2>
+
+            <h3>File Content</h3>
+
+            <pre id="modalContent"></pre>
+
+            <button onclick="closeModal()">OK</button>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>
